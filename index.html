@@ -333,13 +333,22 @@
         <h2>Contact Me</h2>
         <div class="contact-form-container">
             <!-- Form action can be updated later to link to a service like Formspree or Netlify Forms -->
-            <form action="https://formspree.io/f/xkoedwek" method="POST">
-              <input type="email" name="email" required />
-              <textarea name="message" required></textarea>
-              <button type="submit">Send</button>
-            </form>
+            <form
+  action="https://formspree.io/f/{FORM_ID}"
+  class="fs-form"
+  target="_top"
+  method="POST"
+>
+  <div class="fs-field">
+    <label class="fs-label" for="name">Name</label>
+    <input class="fs-input" id="name" name="name" required />
+  </div>
+  <div class="fs-field">
+    <label class="fs-label" for="email">Email Address</label>
+    <input class="fs-input" id="email" name="email" required />
+  </div>
+            </div>
         </div>
-    </div>
 
     <script>
         function calculateLoan() {
